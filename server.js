@@ -44,7 +44,7 @@ async function sendResetPasswordEmail(userEmail, resetToken) {
     from: `"SprintifyHq" <${process.env.EMAIL_USER}>`,
     to: userEmail,
     subject: 'Reset Your Password',
-    text: `Hello! You requested a password reset. Please click the link below to reset your password:\n\n${resetLink}\n\nIf you did not request this, please ignore this email, Thank you.`,
+    text: `Hello Sprinter! You requested a password reset. Please click the link below to reset your password:\n\n${resetLink}\n\nIf you did not request this, please ignore this email, Thank you.`,
   };
 
   try {
