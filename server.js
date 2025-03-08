@@ -41,10 +41,10 @@ const transporter = nodemailer.createTransport({
 async function sendResetPasswordEmail(userEmail, resetToken) {
   const resetLink = `${process.env.BASE_URL}/reset-password?token=${resetToken}`;
   const mailOptions = {
-    from: `"Sprintify" <${process.env.EMAIL_USER}>`,
+    from: `"SprintifyHq" <${process.env.EMAIL_USER}>`,
     to: userEmail,
     subject: 'Reset Your Password',
-    text: `You requested a password reset. Please click the link below to reset your password:\n\n${resetLink}\n\nIf you did not request this, please ignore this email.`,
+    text: `Hello! You requested a password reset. Please click the link below to reset your password:\n\n${resetLink}\n\nIf you did not request this, please ignore this email, Thank you.`,
   };
 
   try {
